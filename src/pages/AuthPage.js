@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import SignUpForm from "../components/SignUpForm";
-import LoginForm from "../components/LogInForm";
+import SignUpForm from "../components/SignUpForm"
+import LoginForm from "../components/LogInForm"
 
 function AuthPage({ setUser }) {
-  const [showLogin, setShowLogin] = useState(true);
+  const [showLogin, setShowLogin] = useState(true)
 
   return (
     <main className="AuthPage">
@@ -20,7 +20,7 @@ function AuthPage({ setUser }) {
         <SignUpForm setUser={setUser} />
       )}
     </main>
-  );
+  )
 }
 
-export default AuthPage;
+export default AuthPage

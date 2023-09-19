@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { logOut } from "../utilities/users-service";
+import { Link } from "react-router-dom"
+import { logOut } from "../utilities/users-service"
 
 function NavBar({ user, setUser }) {
   const handleLogOut = () => {
-    logOut();
-    setUser(null);
-  };
+    logOut()
+    setUser(null)
+  }
   return (
     <nav>
       <Link to="/orders">Order History</Link>
@@ -15,7 +15,7 @@ function NavBar({ user, setUser }) {
         Logout
       </Link>
     </nav>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar

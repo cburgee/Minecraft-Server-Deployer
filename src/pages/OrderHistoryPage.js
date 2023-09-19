@@ -1,12 +1,12 @@
-import { checkToken } from "../utilities/users-service";
+import { checkToken } from "../utilities/users-service"
 
+// TODO: Save token expiration code and change name of file and related functions
 
 function OrderHistoryPage() {
-
   const handleCheckToken = async () => {
-    const expDate = await checkToken();
-    console.log(expDate);
-  };
+    const expDate = await checkToken()
+    console.log(expDate)
+  }
 
   return (
     <div>
@@ -15,7 +15,7 @@ function OrderHistoryPage() {
         Check When My Login Token Expires
       </button>
     </div>
-  );
+  )
 }
 
-export default OrderHistoryPage;
+export default OrderHistoryPage
