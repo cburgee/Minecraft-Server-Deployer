@@ -1,16 +1,17 @@
-Using mern-infrastructureto Create MERN-Stack Projects in the Future
-Here's the process to create a new MERN-Stack project that starts with the infrastructure code:
+# <Minecraft-Server-Deployer(Work-in-Progress)>
 
-Clone the mern-infrastructure repo: git clone <url of mern-infrastructure> <name-of-project>
+## Description
 
-Note that the folder created will be same as <name-of-project>instead of mern-infrastructure
+This application will eventually be a website where users can launch their own minecraft dedicated servers. It is designed to connect non-tech individuals with the power of dedicated servers, without having to learn all of the technical bits. Ideally, I would like to create containerized Java minecraft servers hosted on Amazon Web Services'(AWS) Elastic Kubernetes Service (EKS). I want to develop this app so I can connect non-tech individuals to normally tech-savvy functions and so I can earn passive income while I continue to search for permanent employment.
 
-cd <name-of-project>
-Install the Node modules: npm i
-Create a .env (touch .env) and add entries for DATABASE_URLand SECRET
-Update the "name": "mern-infrastructure"in package.json to the name of your project.
-Create a new repo on your personal GH account.
-Copy the new GH repo's URL.
-Update the remote's URL: git remote set-url origin <paste the copied GH url>
-Push for the first time: git push -u origin main
-Have fun coding your new project and don't forget to make frequent commits!
+## Installation
+
+npm i
+create a .env file
+add environment variables in .env:
+DATABASE_URL=
+SECRET=
+
+## Usage
+
+To Be Developed. But, with a few button presses voilà a minecraft server ready to join.
