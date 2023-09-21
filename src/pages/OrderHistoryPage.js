@@ -10,7 +10,7 @@ function OrderHistoryPage() {
 
   return (
     <div>
-      <h1>OrderHistoryPage</h1>
+      <h1>Users</h1>
       <button onClick={handleCheckToken}>
         Check When My Login Token Expires
       </button>

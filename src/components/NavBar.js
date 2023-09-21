@@ -10,7 +10,7 @@ function NavBar({ user, setUser }) {
     <nav>
       <Link to="/orders">Order History</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link> <span>Welcome, {user.name}</span>{" "}
+      <p>Welcome, {user.name}</p> |
       <Link to="" onClick={handleLogOut}>
         Logout
       </Link>
