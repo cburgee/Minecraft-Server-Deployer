@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom"
 
 import AuthPage from "./pages/AuthPage"
 import OrderHistoryPage from "./pages/OrderHistoryPage"
+import EditPage from "./pages/EditPage"
 import NavBar from "./components/NavBar"
 
 import { getUser } from "./utilities/users-service"
@@ -22,6 +23,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/orders/edit" element={<EditPage user={user} />} />
           </Routes>
         </>
       ) : (

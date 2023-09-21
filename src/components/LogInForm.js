@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { login } from "../utilities/users-service"
 
-export default function LoginForm({ setUser }) {
+function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -57,3 +57,5 @@ export default function LoginForm({ setUser }) {
     </div>
   )
 }
+
+export default LoginForm
