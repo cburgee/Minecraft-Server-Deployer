@@ -1,4 +1,4 @@
-# <Minecraft-Server-Deployer(Work-in-Progress)>
+# Minecraft-Server-Deployer(Work-in-Progress)
 
 ## Description
 
