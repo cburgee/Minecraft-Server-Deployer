@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt")
 function createJWT(user) {
   return jwt.sign({ user }, process.env.SECRET, { expiresIn: "24h" })
 }
-
+//test
 async function create(req, res) {
   // console.log('[From POST handler]', req.body)
   try {
