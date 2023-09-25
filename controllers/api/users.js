@@ -53,6 +53,19 @@ async function getUser(req, res) {
   }
 }
 
+async function deleteUser(req, res) {
+  try {
+    if (!req.user) {
+      throw new Error()
+    }
+    await User.findByIdAndDelete(req.user._id)
+    res.send("User has been deleted.")
+  } catch (error) {
+    console.log(error)
+    res.status(400).json(error)
+  }
+}
+
 async function login(req, res) {
   try {
     // find user in db
@@ -81,4 +94,5 @@ module.exports = {
   checkToken,
   editUser,
   getUser,
+  deleteUser,
 }
