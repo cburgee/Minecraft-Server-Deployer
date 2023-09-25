@@ -44,7 +44,6 @@ export async function signUp(userData) {
 }
 
 export async function EditUser(userData) {
-  console.log("user-service")
   await usersApi.EditUser(userData)
 }
 

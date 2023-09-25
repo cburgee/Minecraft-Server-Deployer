@@ -27,10 +27,25 @@ async function create(req, res) {
 
 async function editUser(req, res) {
   try {
-    console.log(req.body)
-    const user = await User.findByIdAndUpdate(req.body._id, req.body)
+    if (!req.user) {
+      throw new Error()
+    }
+    const user = await User.findByIdAndUpdate(req.user._id, req.body)
     console.log(user)
 
+    res.json(user)
+  } catch (error) {
+    console.log(error)
+    res.status(400).json(error)
+  }
+}
+
+async function getUser(req, res) {
+  try {
+    if (!req.user) {
+      throw new Error()
+    }
+    const user = await User.findById(req.user._id)
     res.json(user)
   } catch (error) {
     console.log(error)
@@ -65,4 +80,5 @@ module.exports = {
   login,
   checkToken,
   editUser,
+  getUser,
 }
