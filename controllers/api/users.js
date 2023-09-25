@@ -25,6 +25,19 @@ async function create(req, res) {
   }
 }
 
+async function editUser(req, res) {
+  try {
+    console.log(req.body)
+    const user = await User.findByIdAndUpdate(req.body._id, req.body)
+    console.log(user)
+
+    res.json(user)
+  } catch (error) {
+    console.log(error)
+    res.status(400).json(error)
+  }
+}
+
 async function login(req, res) {
   try {
     // find user in db
@@ -51,4 +64,5 @@ module.exports = {
   create,
   login,
   checkToken,
+  editUser,
 }

@@ -43,6 +43,11 @@ export async function signUp(userData) {
   return getUser()
 }
 
+export async function EditUser(userData) {
+  console.log("user-service")
+  await usersApi.EditUser(userData)
+}
+
 //* LogOut
 export function logOut() {
   localStorage.removeItem("token")

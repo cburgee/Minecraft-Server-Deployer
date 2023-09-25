@@ -26,6 +26,15 @@ app.use(require("./config/checkToken"))
 // * All other routes
 app.use("/api/users", require("./routes/api/users"))
 
+app.get("/api/*", (req, res) => {
+  res.status(500)
+  // if you using view enggine
+  res.render("error", {
+    message: "internal server error",
+    error: {},
+  })
+})
+
 // Put API routes here, before the "catch all" route
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

@@ -13,6 +13,10 @@ export function signUp(userData) {
   return sendRequest(BASE_URL, "POST", userData)
 }
 
+export function EditUser(userData) {
+  return sendRequest(`${BASE_URL}/edit`, "PUT", userData)
+}
+
 //* Login
 export function login(credentials) {
   return sendRequest(`${BASE_URL}/login`, "POST", credentials)
