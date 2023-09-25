@@ -27,12 +27,7 @@ app.use(require("./config/checkToken"))
 app.use("/api/users", require("./routes/api/users"))
 
 app.get("/api/*", (req, res) => {
-  res.status(500)
-  // if you using view enggine
-  res.render("error", {
-    message: "internal server error",
-    error: {},
-  })
+  res.status(500).json("internal error")
 })
 
 // Put API routes here, before the "catch all" route
