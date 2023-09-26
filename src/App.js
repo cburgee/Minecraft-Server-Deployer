@@ -3,7 +3,6 @@ import { useState } from "react"
 import { Routes, Route } from "react-router-dom"
 
 import AuthPage from "./pages/AuthPage"
-import UsersPage from "./pages/UsersPage"
 import EditPage from "./pages/EditPage"
 import NavBar from "./components/NavBar"
 import ProfilePage from "./pages/ProfilePage"
@@ -12,6 +11,7 @@ import DeleteConfirmationPage from "./pages/DeleteConfirmationPage"
 import { getUser } from "./utilities/users-service"
 
 import "./App.css"
+import WeatherPage from "./pages/WeatherPage"
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -22,7 +22,7 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/users" element={<UsersPage />} />
+            <Route path="/weather-page" element={<WeatherPage />} />
             <Route path="/user/edit" element={<EditPage user={user} />} />
             <Route path="/user/profile" element={<ProfilePage user={user} />} />
             <Route
