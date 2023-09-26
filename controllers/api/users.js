@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt")
 function createJWT(user) {
   return jwt.sign({ user }, process.env.SECRET, { expiresIn: "24h" })
 }
-//test
+
 async function create(req, res) {
   // console.log('[From POST handler]', req.body)
   try {
@@ -30,10 +30,19 @@ async function editUser(req, res) {
     if (!req.user) {
       throw new Error()
     }
-    const user = await User.findByIdAndUpdate(req.user._id, req.body)
-    console.log(user)
+    User.findById(req.user._id, (err, user) => {
+      if (err) throw new Error()
 
-    res.json(user)
+      console.log(req.body)
+
+      // Update all user attributes which are different or missing from user with values from req.body
+      Object.assign(user, req.body)
+
+      user.save().then((savedUser) => {
+        console.log(savedUser)
+        res.json(savedUser)
+      })
+    })
   } catch (error) {
     console.log(error)
     res.status(400).json(error)
@@ -47,6 +56,16 @@ async function getUser(req, res) {
     }
     const user = await User.findById(req.user._id)
     res.json(user)
+  } catch (error) {
+    console.log(error)
+    res.status(400).json(error)
+  }
+}
+
+async function getAllUsers(req, res) {
+  try {
+    const users = await User.find({})
+    res.json(users)
   } catch (error) {
     console.log(error)
     res.status(400).json(error)
@@ -95,4 +114,5 @@ module.exports = {
   editUser,
   getUser,
   deleteUser,
+  getAllUsers,
 }

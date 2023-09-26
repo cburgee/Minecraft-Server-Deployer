@@ -13,6 +13,10 @@ export function signUp(userData) {
   return sendRequest(BASE_URL, "POST", userData)
 }
 
+export function deleteUser(userData) {
+  return sendRequest(`${BASE_URL}/delete`, "DELETE", userData)
+}
+
 export function EditUser(userData) {
   return sendRequest(`${BASE_URL}/edit`, "PUT", userData)
 }
@@ -20,6 +24,10 @@ export function EditUser(userData) {
 //* Login
 export function login(credentials) {
   return sendRequest(`${BASE_URL}/login`, "POST", credentials)
+}
+
+export function getAllUsers(userData) {
+  return sendRequest(`${BASE_URL}/allUsers`, "GET", userData)
 }
 
 //* Check Token

@@ -42,4 +42,10 @@ userSchema.pre("save", async function (next) {
   return next()
 })
 
+userSchema.pre("findOneAndUpdate", async function (next) {
+  const docToUpdate = await this.model.findOne(this.getQuery())
+  this.password = await bcrypt.hash(docToUpdate.password, SALT_ROUNDS)
+  return next()
+})
+
 module.exports = mongoose.model("User", userSchema)

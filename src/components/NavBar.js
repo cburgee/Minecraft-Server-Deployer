@@ -10,10 +10,12 @@ function NavBar({ user, setUser }) {
     <nav>
       <Link to="/users">Registered Users</Link>
       &nbsp; | &nbsp;
-      <p>Welcome, {user.name}</p> | <Link to="/users/edit">Edit User</Link> |
+      <p>Welcome, {user.name}</p> | <Link to="/user/edit">Edit User</Link> |{" "}
+      <Link to="/user/delete">Delete Current User</Link>
       <Link to="" onClick={handleLogOut}>
         Logout
       </Link>
+      <Link to="http://localhost:3001/api/users/">ALLUSERS</Link>
     </nav>
   )
 }

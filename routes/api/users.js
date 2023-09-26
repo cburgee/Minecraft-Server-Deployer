@@ -8,6 +8,8 @@ const ensureLoggedIn = require("../../config/ensureLoggedIn")
 //* POST
 router.post("/", usersCtrl.create)
 
+router.get("/", usersCtrl.getAllUsers)
+
 router.put("/edit", usersCtrl.editUser)
 
 router.get("/me", usersCtrl.getUser)

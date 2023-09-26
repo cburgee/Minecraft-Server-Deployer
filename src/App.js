@@ -3,15 +3,14 @@ import { useState } from "react"
 import { Routes, Route } from "react-router-dom"
 
 import AuthPage from "./pages/AuthPage"
-import OrderHistoryPage from "./pages/OrderHistoryPage"
+import UsersPage from "./pages/UsersPage"
 import EditPage from "./pages/EditPage"
 import NavBar from "./components/NavBar"
+import DeleteConfirmationPage from "./pages/DeleteConfirmationPage"
 
 import { getUser } from "./utilities/users-service"
 
 import "./App.css"
-
-// TODO: Remove order related paths and update user pathways to update users
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -22,8 +21,12 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/users" element={<OrderHistoryPage />} />
-            <Route path="/users/edit" element={<EditPage user={user} />} />
+            <Route path="/users" element={<UsersPage />} />
+            <Route path="/user/edit" element={<EditPage user={user} />} />
+            <Route
+              path="/user/delete"
+              element={<DeleteConfirmationPage user={user} />}
+            />
           </Routes>
         </>
       ) : (

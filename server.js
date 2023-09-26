@@ -8,7 +8,6 @@ const logger = require("morgan")
 const app = express()
 // development port: 3001
 // in production we'll a PORT number set in the environment variables
-//const PORT = process.env.PORT || 3001
 const PORT = 3001
 
 //* Config
