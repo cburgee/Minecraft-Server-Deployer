@@ -13,8 +13,8 @@ export function signUp(userData) {
   return sendRequest(BASE_URL, "POST", userData)
 }
 
-export function deleteUser(userData) {
-  return sendRequest(`${BASE_URL}/delete`, "DELETE", userData)
+export function deleteUser() {
+  return sendRequest(BASE_URL, "DELETE")
 }
 
 export function EditUser(userData) {
@@ -54,8 +54,11 @@ async function sendRequest(url, method = "GET", payload = null) {
     options.headers.Authorization = `Bearer ${token}`
   }
 
+  console.log("before fetch")
   const res = await fetch(url, options)
+  console.log("after fetch")
   // res.ok will be false if the status code set to 4xx in the controller action
   if (res.ok) return res.json()
+  console.log("after ok")
   throw new Error("Bad Request")
 }

@@ -25,7 +25,7 @@ function App() {
             <Route path="/user/edit" element={<EditPage user={user} />} />
             <Route
               path="/user/delete"
-              element={<DeleteConfirmationPage user={user} />}
+              element={<DeleteConfirmationPage setUser={setUser} user={user} />}
             />
           </Routes>
         </>

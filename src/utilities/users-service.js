@@ -38,8 +38,8 @@ export async function EditUser(userData) {
   await usersApi.EditUser(userData)
 }
 
-export async function deleteUser(userData) {
-  await usersApi.deleteUser(userData)
+export async function deleteUser() {
+  await usersApi.deleteUser()
 }
 
 //* LogOut
