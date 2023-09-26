@@ -1,0 +1,27 @@
+.ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #8fca5c;
+  padding: 10px;
+}
+
+.welcomeMsg {
+  position: relative;
+  left: calc(50vw - 215px);
+  background-color: #61371f;
+  color: #8fca5c;
+  border-radius: 20px;
+  padding: 15px;
+  width: 350px;
+}
+
+.link:hover {
+  background-color: #61371f;
+  color: #8fca5c;
+}

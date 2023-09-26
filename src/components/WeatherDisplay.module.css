@@ -1,0 +1,11 @@
+.content {
+  width: 175px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #854f2b;
+  color: #70b237;
+  border: solid 2px #61371f;
+  position: relative;
+  left: 43vw;
+  margin-bottom: 50px;
+}

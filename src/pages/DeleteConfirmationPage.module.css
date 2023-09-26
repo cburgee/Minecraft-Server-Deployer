@@ -1,0 +1,17 @@
+.title {
+  color: #61371f;
+}
+
+.deletebutton {
+  padding: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: red;
+  color: black;
+}
+
+.deletebutton:hover {
+  text-decoration: underline;
+  background-color: red;
+  color: white;
+}

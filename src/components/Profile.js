@@ -1,11 +1,12 @@
+import styles from "./Profile.module.css"
 function Profile({ user }) {
   return (
-    <div>
-      <h1>Hello, {user.name}</h1>
-      <h3>Username: {user.name}</h3>
-      <h3>Email: {user.email}</h3>
-      <h3>Hashed Password: {user.password}</h3>
-    </div>
+    <ul className={styles.container}>
+      <li className={styles.title}>Hello, {user.name}</li>
+      <li className={styles.body}>Username: {user.name}</li>
+      <li className={styles.body}>Email: {user.email}</li>
+      <li className={styles.body}>Hashed Password: {user.password}</li>
+    </ul>
   )
 }
 

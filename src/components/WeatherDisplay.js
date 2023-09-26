@@ -1,6 +1,7 @@
+import styles from "./WeatherDisplay.module.css"
 export default function WeatherDisplay({ weatherData }) {
   return weatherData ? (
-    <div>
+    <div className={styles.content}>
       <h2>Whats the weather in: </h2>
       <h3>Dallas, TX</h3>
       <h5>Temp: {weatherData.current.temp}F</h5>
