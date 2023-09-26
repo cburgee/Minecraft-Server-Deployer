@@ -6,6 +6,7 @@ import AuthPage from "./pages/AuthPage"
 import UsersPage from "./pages/UsersPage"
 import EditPage from "./pages/EditPage"
 import NavBar from "./components/NavBar"
+import ProfilePage from "./pages/ProfilePage"
 import DeleteConfirmationPage from "./pages/DeleteConfirmationPage"
 
 import { getUser } from "./utilities/users-service"
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/users" element={<UsersPage />} />
             <Route path="/user/edit" element={<EditPage user={user} />} />
+            <Route path="/user/profile" element={<ProfilePage user={user} />} />
             <Route
               path="/user/delete"
               element={<DeleteConfirmationPage setUser={setUser} user={user} />}
