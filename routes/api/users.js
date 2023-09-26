@@ -14,7 +14,7 @@ router.put("/edit", usersCtrl.editUser)
 
 router.get("/me", usersCtrl.getUser)
 
-router.delete("/delete", usersCtrl.deleteUser)
+router.delete("/", usersCtrl.deleteUser)
 
 router.post("/login", usersCtrl.login)
 
